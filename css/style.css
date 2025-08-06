@@ -31,3 +31,98 @@ h1, h2, h3 {
     font-family: 'Poppins', sans-serif;
     color: var(--color-text-primary);
 }
+
+/* Header and Navigation Styles */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: rgba(17, 24, 39, 0.8);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--color-surface);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+}
+
+.nav-logo a {
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-decoration: none;
+    color: var(--color-text-primary);
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: var(--color-text-primary);
+    transition: color 0.3s ease;
+}
+
+.nav-menu a:not(.cta-button):hover {
+    color: var(--color-brand-interactive);
+}
+
+.cta-button {
+    padding: 0.5rem 1rem;
+    background-color: var(--color-brand-interactive);
+    color: #FFFFFF;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: filter 0.3s ease;
+}
+
+.cta-button:hover {
+    filter: brightness(115%);
+}
+
+/* Footer Styles */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--color-surface);
+    margin-top: 4rem;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.copyright p,
+.social-links a {
+    font-size: 0.9rem;
+    color: var(--color-text-secondary);
+}
+
+.social-links ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    padding: 0;
+    margin: 0;
+}
+
+.social-links a {
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: var(--color-text-primary);
+}
