@@ -126,3 +126,324 @@ footer {
 .social-links a:hover {
     color: var(--color-text-primary);
 }
+
+.social-links img {
+    height: 32px;
+    width: auto;
+    vertical-align: middle; /* Improves alignment with text */
+}
+
+/* Hero Section Styles */
+.hero-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 6rem 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 4rem;
+}
+
+.hero-text h1 {
+    font-size: 4.5rem;
+    font-weight: 700;
+    line-height: 1.1;
+}
+
+.hero-text .tagline {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--color-brand-interactive);
+    margin: 1rem 0;
+}
+
+.hero-text p:not(.tagline) {
+    color: var(--color-text-secondary);
+    font-size: 1.1rem;
+    max-width: 50ch;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.8rem 1.6rem;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background-color: var(--color-brand-interactive);
+    color: #FFFFFF;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--color-text-primary);
+    border: 1px solid var(--color-text-secondary);
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    filter: brightness(115%);
+}
+
+.btn-secondary:hover {
+    background-color: var(--color-surface);
+    border-color: var(--color-brand-interactive);
+}
+
+.hero-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px -10px rgba(59, 130, 246, 0.4);
+}
+
+/* About Me Section Styles */
+.about-container {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    align-items: center;
+    gap: 4rem;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 6rem 2rem;
+}
+
+.about-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.about-text h2 {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+.about-text p {
+    line-height: 1.6;
+    color: var(--color-text-secondary);
+    margin-bottom: 1rem;
+}
+
+.about-text h3 {
+    font-size: 1.5rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.skills-list {
+    list-style: none;
+    padding-left: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+    font-size: 1rem;
+}
+
+.skills-list li {
+    position: relative;
+    padding-left: 20px;
+}
+
+.skills-list li::before {
+    content: '▹';
+    position: absolute;
+    left: 0;
+    color: var(--color-brand-interactive);
+    font-weight: 700;
+}
+
+/* Projects Section Styles */
+#projects {
+    padding: 6rem 2rem;
+}
+
+#projects h2 {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 3rem;
+}
+
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.project-card {
+    background-color: var(--color-surface);
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid transparent;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s cubic-bezier(.4,2,.6,1), box-shadow 0.3s cubic-bezier(.4,2,.6,1), border-color 0.3s;
+    padding: 0 1.5rem 1.5rem 1.5rem;
+}
+
+.project-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.project-card h3,
+.project-card .project-tags,
+.project-card p,
+.project-card .btn {
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 1.2rem;
+}
+
+.project-card h3 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.project-tags {
+    display: flex;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+}
+
+.project-tags span {
+    background: rgba(59, 130, 246, 0.12);
+    color: var(--color-brand-interactive);
+    font-size: 0.95rem;
+    font-weight: 600;
+    padding: 0.25rem 0.75rem;
+    border-radius: 999px;
+}
+
+.project-card p {
+    color: var(--color-text-secondary);
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 1.2rem;
+}
+
+.project-card .btn {
+    margin-top: auto;
+    align-self: flex-start;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    border-color: var(--color-brand-interactive);
+}
+
+/* Contact Section Styles */
+#contact {
+    padding: 6rem 0;
+}
+
+#contact h2,
+#contact p {
+    text-align: center;
+}
+
+#contact h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+#contact p {
+    color: var(--color-text-secondary);
+    margin-bottom: 3rem;
+    max-width: 60ch;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#contact form {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-surface);
+    border-radius: 5px;
+    color: var(--color-text-primary);
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    transition: border-color 0.2s;
+    resize: vertical;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+    border-color: var(--color-brand-interactive);
+}
+
+#contact form .btn {
+    width: 100%;
+    margin-top: 1rem;
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+/* Hamburger Menu Styles (Default: Hidden) */
+.hamburger-menu {
+    display: none;
+}
+
+.hamburger-menu .bar {
+    width: 25px;
+    height: 3px;
+    background-color: var(--color-text-primary);
+    margin: 5px 0;
+    transition: 0.4s;
+}
+
+/* Responsive Navigation: Show Hamburger, Hide Menu on Mobile */
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none;
+    }
+    .hamburger-menu {
+        display: block;
+        cursor: pointer;
+    }
+}
