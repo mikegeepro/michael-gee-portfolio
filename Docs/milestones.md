@@ -51,23 +51,23 @@ Status: ⏳ In Progress
 
 Milestone 4: Interactivity & Functionality (JavaScript)
 
-Status: ⏸️ Pending
+Status: ✅ Complete
 
-    [ ] Implement smooth scrolling for navigation links.
+    [x] Implement smooth scrolling for navigation links.
 
-    [ ] Add functionality to the mobile hamburger menu.
+    [x] Add functionality to the mobile hamburger menu.
 
-    [ ] Add subtle hover effects or animations to buttons and project cards.
+    [x] Add subtle hover effects or animations to buttons and project cards.
 
-     ] Implement the logic for the project gallery (e.g., opening a modal on click).
+    [x] Implement the logic for the project gallery (e.g., opening a modal on click).
 
-    [ ] Implement client-side validation for the contact form.
+    [x] Implement client-side validation for the contact form.
 
 Milestone 5: Testing & Deployment
 
-Status: ⏸️ Pending
+Status: ⏳ In Progress
 
-    [ ] Perform cross-browser testing (Chrome, Firefox, Safari).
+    [ ] 👉 Perform cross-browser testing (Chrome, Firefox, Safari). <-- WE ARE HERE
 
     [ ] Perform responsive testing on various physical devices or emulators.
 

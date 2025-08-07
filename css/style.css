@@ -473,3 +473,95 @@ textarea:focus {
         align-items: center;
     }
 }
+
+/* Project Modal Styles */
+.modal-backdrop {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    overflow: auto;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.modal-content {
+    background-color: var(--color-surface);
+    margin: 5% auto;
+    padding: 2rem;
+    border-radius: 10px;
+    max-width: 800px;
+    width: 90%;
+    position: relative;
+    animation: slideIn 0.4s ease-in-out;
+}
+
+.modal-close-btn {
+    color: var(--color-text-secondary);
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    font-size: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.modal-close-btn:hover {
+    color: var(--color-text-primary);
+}
+
+#modal-project-image {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 1.5rem;
+}
+
+#modal-project-title {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+#modal-project-description {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: var(--color-text-secondary);
+}
+
+/* Keyframe animations for modal */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { transform: translateY(-50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+/* Form Validation Styles */
+.form-group .error-message {
+    color: #F87171; /* A light red for errors */
+    font-size: 0.875rem;
+    margin-top: 0.5rem;
+    display: none; /* Hidden by default */
+}
+
+.form-group input.error,
+.form-group textarea.error {
+    border-color: #F87171;
+}
+
+#form-success-message {
+    color: #34D399; /* A nice green for success */
+    text-align: center;
+    font-weight: 600;
+    margin-top: 1rem;
+    display: none; /* Hidden by default */
+}

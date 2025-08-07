@@ -90,7 +90,7 @@
                         <span>Generative AI</span>
                     </div>
                     <p>Developed a proof-of-concept model using machine learning to analyze network traffic patterns and identify novel threats, reducing false positives by 30%.</p>
-                    <a href="#" class="btn btn-primary">View Case Study</a>
+                    <a href="#" class="btn btn-primary btn-view-case-study" data-title="AI-Powered Threat Detection Model" data-image-src="https://via.placeholder.com/800x450" data-description="This project involved designing and implementing a proof-of-concept machine learning model to identify anomalous network behavior in real-time. By leveraging a custom-built dataset and recurrent neural networks, the model successfully reduced false positives by 30% compared to traditional signature-based systems, demonstrating a significant improvement in threat detection accuracy.">View Case Study</a>
                 </div>
 
                 <!-- Project Card 2 - Sales Strategy Focus -->
@@ -102,7 +102,7 @@
                         <span>Strategy</span>
                     </div>
                     <p>Led a complete overhaul of a SaaS company's enterprise sales playbook, resulting in a 15% shorter sales cycle and a 20% increase in deal size.</p>
-                    <a href="#" class="btn btn-primary">View Case Study</a>
+                    <a href="#" class="btn btn-primary btn-view-case-study" data-title="Enterprise Sales Playbook Overhaul" data-image-src="https://via.placeholder.com/800x450" data-description="Led a strategic initiative to completely rebuild the enterprise sales playbook for a B2B SaaS provider. This involved conducting market analysis, interviewing top sales representatives, and creating a new modular system for sales collateral, email templates, and demo scripts. The new playbook was adopted company-wide and directly contributed to a 15% shorter sales cycle and a 20% increase in average deal size within two quarters.">View Case Study</a>
                 </div>
 
                 <!-- Project Card 3 - LiDAR/Tech Focus -->
@@ -114,7 +114,7 @@
                         <span>Data Analysis</span>
                     </div>
                     <p>Consulted on a project to analyze LiDAR point cloud data for object detection, improving the perception accuracy of an autonomous vehicle system.</p>
-                    <a href="#" class="btn btn-primary">View Case Study</a>
+                    <a href="#" class="btn btn-primary btn-view-case-study" data-title="LiDAR Data Analysis for Autonomous Systems" data-image-src="https://via.placeholder.com/800x450" data-description="As a consultant, I guided a team in processing and analyzing large-scale LiDAR point cloud data for an autonomous vehicle startup. The primary challenge was to improve object detection and classification accuracy in complex urban environments. My work focused on implementing segmentation algorithms and filtering techniques that improved perception accuracy by 25% and reduced computational overhead.">View Case Study</a>
                 </div>
             </div>
         </section>
@@ -173,6 +173,17 @@
         </div>
     </footer>
 
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.2/vanilla-tilt.min.js"></script>
     <script src="js/script.js"></script>
+
+    <!-- Project Modal -->
+    <div id="project-modal" class="modal-backdrop">
+        <div class="modal-content">
+            <span class="modal-close-btn">&times;</span>
+            <img id="modal-project-image" src="" alt="Project Image">
+            <h2 id="modal-project-title"></h2>
+            <p id="modal-project-description"></p>
+        </div>
+    </div>
 </body>
 </html>
