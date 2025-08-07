@@ -437,6 +437,19 @@ textarea:focus {
     transition: 0.4s;
 }
 
+/* Active Hamburger Icon Animation (X) */
+.hamburger-menu.active .bar:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.hamburger-menu.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-menu.active .bar:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
 /* Responsive Navigation: Show Hamburger, Hide Menu on Mobile */
 @media (max-width: 768px) {
     .nav-menu {
@@ -445,5 +458,18 @@ textarea:focus {
     .hamburger-menu {
         display: block;
         cursor: pointer;
+    }
+    
+    .nav-menu.active {
+        display: flex;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+        background-color: var(--color-background);
+        padding: 1rem 0;
+        border-top: 1px solid var(--color-surface);
+        align-items: center;
     }
 }
