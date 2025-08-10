@@ -280,6 +280,17 @@ footer {
     margin-bottom: 3rem;
 }
 
+/* My Work Section Styles */
+#work {
+    padding: 6rem 2rem;
+}
+
+#work h2 {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 3rem;
+}
+
 .projects-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -365,6 +376,226 @@ footer {
 #contact h2,
 #contact p {
     text-align: center;
+}
+
+/* Services Section Styles */
+#services {
+    padding: 6rem 2rem;
+}
+
+#services h2 {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 3rem;
+}
+
+.services-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.service-card {
+    background-color: var(--color-surface);
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid transparent;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s cubic-bezier(.4,2,.6,1), box-shadow 0.3s cubic-bezier(.4,2,.6,1), border-color 0.3s;
+    padding: 2rem;
+}
+
+.service-card h3 {
+    color: var(--color-brand-interactive);
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.service-card p {
+    color: var(--color-text-secondary);
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    border-color: var(--color-brand-interactive);
+}
+
+/* What Drives Me Section Styles */
+#passions {
+    padding: 6rem 2rem;
+}
+
+#passions h2 {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 3rem;
+}
+
+.passions-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.passion-card {
+    background-color: var(--color-surface);
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid transparent;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s cubic-bezier(.4,2,.6,1), box-shadow 0.3s cubic-bezier(.4,2,.6,1), border-color 0.3s;
+    padding: 2rem;
+}
+
+.passion-card h3 {
+    color: var(--color-accent-cta);
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.passion-card p {
+    color: var(--color-text-secondary);
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+.passion-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    border-color: var(--color-accent-cta);
+}
+
+/* Interests Section Styles */
+#interests {
+    padding: 6rem 2rem;
+}
+
+#interests h2 {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 3rem;
+}
+
+.interests-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.interest-card {
+    background-color: var(--color-surface);
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid transparent;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s cubic-bezier(.4,2,.6,1), box-shadow 0.3s cubic-bezier(.4,2,.6,1), border-color 0.3s;
+    padding: 2rem;
+}
+
+.interest-card h3 {
+    color: var(--color-brand-interactive);
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.interest-card p {
+    color: var(--color-text-secondary);
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+.interest-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    border-color: var(--color-brand-interactive);
+}
+
+/* Testimonials Section Styles */
+#testimonials {
+    padding: 6rem 2rem;
+    background-color: var(--color-surface);
+}
+
+#testimonials h2 {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 3rem;
+}
+
+.testimonials-scroll-container {
+    overflow: hidden;
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.testimonials-track {
+    display: flex;
+    gap: 2rem;
+    animation: scroll-testimonials 30s linear infinite;
+    width: max-content;
+}
+
+.testimonial-card {
+    background-color: var(--color-background);
+    border-radius: 10px;
+    padding: 1.5rem;
+    min-width: 300px;
+    border: 1px solid var(--color-border, rgba(255, 255, 255, 0.1));
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+}
+
+.testimonial-card img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin: 0 auto 1rem;
+    display: block;
+}
+
+.testimonial-card h4 {
+    color: var(--color-text-primary);
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+.testimonial-card p {
+    color: var(--color-text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.5;
+    text-align: center;
+    font-style: italic;
+}
+
+@keyframes scroll-testimonials {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
 }
 
 #contact h2 {
@@ -479,6 +710,11 @@ textarea:focus {
     .hero-container,
     .about-container,
     #projects,
+    #work,
+    #services,
+    #passions,
+    #interests,
+    #testimonials,
     #contact {
         padding-top: 4rem;
         padding-bottom: 4rem;
@@ -491,10 +727,13 @@ textarea:focus {
         text-align: center; /* Center-align text for a better mobile look */
     }
 
-    /* Center the image in the About section on mobile */
-    .about-image {
-        margin: 0 auto;
-        max-width: 350px; /* Constrain image size on mobile */
+    /* Stack the three-column grid layouts on mobile */
+    .projects-container,
+    .services-container,
+    .passions-container,
+    .interests-container {
+        grid-template-columns: 1fr; /* Change to a single column */
+        gap: 1.5rem;
     }
 
     /* Adjust heading sizes for mobile readability */
@@ -504,9 +743,27 @@ textarea:focus {
 
     .about-text h2,
     #projects h2,
+    #work h2,
+    #services h2,
+    #passions h2,
+    #interests h2,
+    #testimonials h2,
     #contact h2 {
         font-size: 2rem;
     }
+
+    /* Pause testimonials scroll on mobile for better UX */
+    .testimonials-track {
+        animation-play-state: paused;
+    }
+
+    /* Center the image in the About section on mobile */
+    .about-image {
+        margin: 0 auto;
+        max-width: 350px; /* Constrain image size on mobile */
+    }
+
+
 
     /* Center the hero buttons on mobile */
     .hero-buttons {
@@ -590,6 +847,18 @@ textarea:focus {
 @keyframes slideIn {
     from { transform: translateY(-50px); opacity: 0; }
     to { transform: translateY(0); opacity: 1; }
+}
+
+/* Image Placeholder Styles */
+.image-placeholder {
+    background-color: var(--color-surface);
+    border: 2px dashed var(--color-border, rgba(255, 255, 255, 0.2));
+    border-radius: 10px;
+    padding: 2rem;
+    text-align: center;
+    color: var(--color-text-secondary);
+    margin-bottom: 2rem;
+    font-style: italic;
 }
 
 /* Form Validation Styles */
