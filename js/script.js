@@ -168,7 +168,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-// Contact Form Validation
+// Contact Form Validation and Submission
 document.addEventListener('DOMContentLoaded', function() {
     const form = document.querySelector('#contact form');
     if (form) {
@@ -180,6 +180,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // Create a success message element
         const successMessage = document.createElement('p');
         successMessage.id = 'form-success-message';
+        successMessage.className = 'success-message';
         form.appendChild(successMessage);
 
         form.addEventListener('submit', function(event) {
@@ -187,14 +188,48 @@ document.addEventListener('DOMContentLoaded', function() {
             let isValid = validateForm();
             
             if (isValid) {
-                successMessage.textContent = 'Thank you for your message! I will get back to you shortly.';
-                successMessage.style.display = 'block';
-                form.reset();
-                setTimeout(() => {
-                    successMessage.style.display = 'none';
-                }, 5000); // Hide message after 5 seconds
+                // Show loading state
+                const submitBtn = form.querySelector('button[type="submit"]');
+                const originalText = submitBtn.textContent;
+                submitBtn.textContent = 'Sending...';
+                submitBtn.disabled = true;
+                
+                // Prepare email data
+                const templateParams = {
+                    from_name: nameInput.value,
+                    from_email: emailInput.value,
+                    subject: subjectInput.value,
+                    message: messageInput.value,
+                    to_name: 'Michael Gee'
+                };
+
+                // Send email using EmailJS
+                emailjs.send('service_g23i0xu', 'template_rznp6na', templateParams)
+                    .then(function(response) {
+                        console.log('SUCCESS!', response.status, response.text);
+                        successMessage.textContent = 'Thank you for your message! I will get back to you shortly.';
+                        successMessage.style.display = 'block';
+                        successMessage.className = 'success-message';
+                        form.reset();
+                        
+                        // Hide success message after 5 seconds
+                        setTimeout(() => {
+                            successMessage.style.display = 'none';
+                        }, 5000);
+                    })
+                    .catch(function(error) {
+                        console.log('FAILED...', error);
+                        successMessage.textContent = 'Sorry, there was an error sending your message. Please try again or contact me directly.';
+                        successMessage.style.display = 'block';
+                        successMessage.className = 'error-message';
+                    })
+                    .finally(function() {
+                        // Reset button state
+                        submitBtn.textContent = originalText;
+                        submitBtn.disabled = false;
+                    });
             } else {
-                 successMessage.style.display = 'none';
+                successMessage.style.display = 'none';
             }
         });
 
