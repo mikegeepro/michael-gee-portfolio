@@ -1122,3 +1122,32 @@ textarea:focus {
     margin-top: 1rem;
     display: none; /* Hidden by default */
 }
+
+/* Form success and error messages */
+.success-message {
+    color: #28a745;
+    background-color: #d4edda;
+    border: 1px solid #c3e6cb;
+    border-radius: 4px;
+    padding: 12px;
+    margin-top: 15px;
+    text-align: center;
+    display: none;
+}
+
+.error-message {
+    color: #dc3545;
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+    border-radius: 4px;
+    padding: 8px 12px;
+    margin-top: 5px;
+    font-size: 0.9em;
+    display: none;
+}
+
+/* Loading state for submit button */
+button[type="submit"]:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
