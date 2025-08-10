@@ -28,11 +28,45 @@ document.addEventListener('DOMContentLoaded', function() {
     const hamburger = document.querySelector('.hamburger-menu');
     const navMenu = document.querySelector('.nav-menu');
     
-    hamburger.addEventListener('click', function() {
-        hamburger.classList.toggle('active');
-        navMenu.classList.toggle('active');
+            hamburger.addEventListener('click', function() {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        // Resume modal functionality
+        const resumeBtn = document.getElementById('resume-btn');
+        const resumeModal = document.getElementById('resume-modal');
+        const closeResumeModal = document.getElementById('close-resume-modal');
+
+        // Open resume modal
+        resumeBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            resumeModal.style.display = 'block';
+            document.body.style.overflow = 'hidden'; // Prevent background scrolling
+        });
+
+        // Close resume modal
+        closeResumeModal.addEventListener('click', function() {
+            resumeModal.style.display = 'none';
+            document.body.style.overflow = 'auto'; // Restore background scrolling
+        });
+
+        // Close modal when clicking outside of it
+        resumeModal.addEventListener('click', function(e) {
+            if (e.target === resumeModal) {
+                resumeModal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
+        });
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && resumeModal.style.display === 'block') {
+                resumeModal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
+        });
     });
-});
 
 // Initialize Vanilla Tilt on project cards
 document.addEventListener('DOMContentLoaded', function() {
@@ -49,6 +83,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const modal = document.getElementById('project-modal');
     const closeBtn = document.querySelector('.modal-close-btn');
     const caseStudyBtns = document.querySelectorAll('.btn-view-case-study');
+    const interestImages = document.querySelectorAll('.interest-card img[data-image-src]');
+    const testimonialCards = document.querySelectorAll('.testimonial-card');
 
     const modalTitle = document.getElementById('modal-project-title');
     const modalImage = document.getElementById('modal-project-image');
@@ -67,6 +103,51 @@ document.addEventListener('DOMContentLoaded', function() {
             modalTitle.textContent = title;
             modalImage.src = imgSrc;
             modalDescription.textContent = description;
+
+            // Show modal
+            modal.style.display = 'block';
+        });
+    });
+
+    // Interest Image Modal Logic
+    interestImages.forEach(img => {
+        img.addEventListener('click', function(event) {
+            event.preventDefault();
+            
+            // Get data from image
+            const title = this.dataset.title;
+            const imgSrc = this.dataset.imageSrc;
+            const description = this.dataset.description;
+
+            // Populate modal
+            modalTitle.textContent = title;
+            modalImage.src = imgSrc;
+            modalDescription.textContent = description;
+
+            // Show modal
+            modal.style.display = 'block';
+        });
+    });
+
+    // Testimonial Card Modal Logic
+    testimonialCards.forEach(card => {
+        card.addEventListener('click', function(event) {
+            event.preventDefault();
+            
+            // Get data from testimonial card data attributes
+            const name = this.dataset.name;
+            const title = this.dataset.title;
+            const company = this.dataset.company;
+            const testimonialText = this.dataset.testimonial;
+            const headshotSrc = this.dataset.headshot;
+            
+            // Create full testimonial content for modal
+            const fullContent = `"${testimonialText}"\n\n- ${name}, ${title} at ${company}`;
+
+            // Populate modal
+            modalTitle.textContent = name;
+            modalImage.src = headshotSrc;
+            modalDescription.textContent = fullContent;
 
             // Show modal
             modal.style.display = 'block';

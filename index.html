@@ -12,15 +12,20 @@
         <nav>
             <div class="nav-container">
                 <div class="nav-logo">
-                    <a href="index.html">Michael Gee</a>
+                    <a href="index.html">
+                        <img src="images-misc/logo-michael-gee-pro-square.png" alt="Michael Gee Logo" class="nav-logo-img">
+                        <span>Michael Gee</span>
+                    </a>
                 </div>
                 <ul class="nav-menu">
                     <li><a href="#about">About</a></li>
-                    <li><a href="#work">My Work</a></li>
+                    <li><a href="#work">Work Experience</a></li>
                     <li><a href="#services">Services</a></li>
                     <li><a href="#passions">Passions</a></li>
+                    <li><a href="#interests">Interests</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
                     <li><a href="#contact">Contact</a></li>
-                    <li><a href="/michael_gee_resume.pdf" class="cta-button">Resume</a></li>
+                                           <li><a href="#" class="cta-button" id="resume-btn">Resume</a></li>
                 </ul>
                 <div class="hamburger-menu">
                     <div class="bar"></div>
@@ -148,32 +153,32 @@
             <h2>And When I'm Not Working...</h2>
             <div class="interests-container">
                 <div class="interest-card">
-                    <img src="images-main/04-01-travel.jpg" alt="Travel">
+                    <img src="images-main/04-01-travel.jpg" alt="Travel" data-image-src="images-main/04-01-travel.jpg" data-title="Travel" data-description="Exploring the world with my family, one country and culture at a time. 25+ down, many more to go.">
                     <h3>Travel</h3>
                     <p>Exploring the world with my family, one country and culture at a time. 25+ down, many more to go.</p>
                 </div>
                                      <div class="interest-card">
-                         <img src="images-main/04-03-animals.jpg" alt="Animal Lovers">
+                         <img src="images-main/04-03-animals.jpg" alt="Animal Lovers" data-image-src="images-main/04-03-animals.jpg" data-title="Animal Lovers" data-description="My wife and I are huge animal lovers and advocates for adoption from local shelters. Life is infinitely better with our pup, Penny.">
                          <h3>Animal Lovers</h3>
                          <p>My wife and I are huge animal lovers and advocates for adoption from local shelters. Life is infinitely better with our pup, Penny.</p>
                      </div>
                 <div class="interest-card">
-                    <img src="images-main/04-02-food-drink.jpg" alt="Food & Drink">
+                    <img src="images-main/04-02-food-drink.jpg" alt="Food & Drink" data-image-src="images-main/04-02-food-drink.jpg" data-title="Food & Drink" data-description="On a mission to find the best food, coffee, and cocktails, from my hometown of Atlanta to wherever the road takes me.">
                     <h3>Food & Drink</h3>
                     <p>On a mission to find the best food, coffee, and cocktails, from my hometown of Atlanta to wherever the road takes me.</p>
                 </div>
                 <div class="interest-card">
-                    <img src="images-main/04-04-golf.jpg" alt="Golf">
+                    <img src="images-main/04-04-golf.jpg" alt="Golf" data-image-src="images-main/04-04-golf.jpg" data-title="Golf" data-description="Enthusiastically searching for my ball in the woods since 2005. I'm not great, but I'm not slow!">
                     <h3>Golf</h3>
-                    <p>Enthusiastically searching for my ball in the woods since 2005. I'm not great, but I'm not slow!</p>
+                    <p>Enthusiastically searching for my ball in the world since 2005. I'm not great, but I'm not slow!</p>
                 </div>
                                      <div class="interest-card">
-                         <img src="images-main/04-05-hiking.jpg" alt="Hiking">
+                         <img src="images-main/04-05-hiking.jpg" alt="Hiking" data-image-src="images-main/04-05-hiking.jpg" data-title="Hiking" data-description="Whether it's a solo hike, a family outing, or a trek with the dog, I love hitting the trails around Atlanta and wherever we travel.">
                          <h3>Hiking</h3>
                          <p>Whether it's a solo hike, a family outing, or a trek with the dog, I love hitting the trails around Atlanta and wherever we travel.</p>
                      </div>
                      <div class="interest-card">
-                         <img src="images-main/04-06-volunteer-work.jpeg" alt="Volunteer Work">
+                         <img src="images-main/04-06-volunteer-work.jpeg" alt="Volunteer Work" data-image-src="images-main/04-06-volunteer-work.jpeg" data-title="Volunteer Work" data-description="When time allows, we love giving back to our community by volunteering with great local organizations like Trees Atlanta and the Atlanta Food Bank.">
                          <h3>Volunteer Work</h3>
                          <p>When time allows, we love giving back to our community by volunteering with great local organizations like Trees Atlanta and the Atlanta Food Bank.</p>
                      </div>
@@ -186,50 +191,188 @@
             <div class="testimonials-scroll-container">
                 <div class="testimonials-track">
                     <!-- Testimonial 1 -->
-                    <div class="testimonial-card">
-                        <img src="https://via.placeholder.com/80x80/4A90E2/FFFFFF?text=JD" alt="John Doe">
-                        <h4>John Doe</h4>
-                        <p>"Michael's strategic approach to sales transformed our go-to-market strategy. His insights were invaluable."</p>
+                    <div class="testimonial-card" data-name="Dennis Walczak" data-title="District Sales Manager" data-company="Palo Alto Networks" data-testimonial="Mike Gee is the consummate professional and ideal partner. I have had the pleasure of working alongside Mike for the past three years and have been impressed with his ability to align to our customers' desired business results, develop strategies to deliver those outcomes, and execute his plan to achieve the results on time and within budget. I rely on his attention to detail as he holds our team accountable to deliver the appropriate solution time and time again. He elevates my performance and those around him. For these reasons and because he has become a great friend, I recommend Mike Gee." data-headshot="images-main/test-dennis-walczak.jpg">
+                        <div class="testimonial-header">
+                            <img src="images-main/test-dennis-walczak.jpg" alt="Dennis Walczak">
+                            <div class="testimonial-author">
+                                <h4>Dennis Walczak</h4>
+                                <p class="author-title"><em>District Sales Manager</em><br>Palo Alto Networks</p>
+                            </div>
+                        </div>
+                        <div class="testimonial-content">
+                            <p>"Mike Gee is the consummate professional and ideal partner. I have had the pleasure of working alongside Mike for the past three years and have been impressed with his ability to align to our customers' desired business results, develop strategies to deliver those outcomes, and execute his plan to achieve the results on time and within budget. I rely on his attention to detail as he holds our team accountable to deliver the appropriate solution time and time again. He elevates my performance and those around him. For these reasons and because he has become a great friend, I recommend Mike Gee."</p>
+                        </div>
                     </div>
                     <!-- Testimonial 2 -->
-                    <div class="testimonial-card">
-                        <img src="https://via.placeholder.com/80x80/50C878/FFFFFF?text=JS" alt="Jane Smith">
-                        <h4>Jane Smith</h4>
-                        <p>"Working with Michael on our cybersecurity implementation was seamless. He truly understands both tech and business."</p>
+                    <div class="testimonial-card" data-name="Tom Oliff" data-title="Inside Sales Manager" data-company="Net @ Work" data-testimonial="I've had the pleasure of working along side Mike in similar roles for 8+ years and have always been impressed with his professionalism and laser focus on exceeding customer expectations. He is consistently able to pull together cross-functional teams to successfully execute often complex / difficult projects with large customer organizations across multiple verticals. Mike truly sets a high bar for performance amongst his peers and any organization would be lucky to have him onboard helping to drive profitability and growth!" data-headshot="images-main/test-tom-oliff.jpg">
+                        <div class="testimonial-header">
+                            <img src="images-main/test-tom-oliff.jpg" alt="Tom Oliff">
+                            <div class="testimonial-author">
+                                <h4>Tom Oliff</h4>
+                                <p class="author-title"><em>Inside Sales Manager</em><br>Net @ Work</p>
+                            </div>
+                        </div>
+                        <div class="testimonial-content">
+                            <p>"I've had the pleasure of working along side Mike in similar roles for 8+ years and have always been impressed with his professionalism and laser focus on exceeding customer expectations. He is consistently able to pull together cross-functional teams to successfully execute often complex / difficult projects with large customer organizations across multiple verticals. Mike truly sets a high bar for performance amongst his peers and any organization would be lucky to have him onboard helping to drive profitability and growth!"</p>
+                        </div>
                     </div>
                     <!-- Testimonial 3 -->
-                    <div class="testimonial-card">
-                        <img src="https://via.placeholder.com/80x80/FF6B6B/FFFFFF?text=MB" alt="Mike Brown">
-                        <h4>Mike Brown</h4>
-                        <p>"Michael's AI consulting helped us optimize our workflows and increase productivity by 40%."</p>
+                    <div class="testimonial-card" data-name="Andrew Kozlowitz" data-title="Vice President of Information Technology" data-company="MGT" data-testimonial="Mike is the reference standard of a customer advocate and champion. He continues to set the bar in our organization and in outside organizations on how to present customer solutions, and simply take care of customers. Mike and I have worked together for 8 years across various roles in sales and engineering, and he embraces change and additional responsibilities, while effectively communicating and managing complex situations." data-headshot="images-main/test-andrew-koz.jpg">
+                        <div class="testimonial-header">
+                            <img src="images-main/test-andrew-koz.jpg" alt="Andrew Kozlowitz">
+                            <div class="testimonial-author">
+                                <h4>Andrew Kozlowitz</h4>
+                                <p class="author-title"><em>Vice President of Information Technology</em><br>MGT</p>
+                            </div>
+                        </div>
+                        <div class="testimonial-content">
+                            <p>"Mike is the reference standard of a customer advocate and champion. He continues to set the bar in our organization and in outside organizations on how to present customer solutions, and simply take care of customers. Mike and I have worked together for 8 years across various roles in sales and engineering, and he embraces change and additional responsibilities, while effectively communicating and managing complex situations."</p>
+                        </div>
                     </div>
-                    <!-- Testimonial 4 -->
-                    <div class="testimonial-card">
-                        <img src="https://via.placeholder.com/80x80/9B59B6/FFFFFF?text=SL" alt="Sarah Lee">
-                        <h4>Sarah Lee</h4>
-                        <p>"His territory management expertise helped us expand into three new markets successfully."</p>
+                    <!-- Testimonial 4: Brandon Aveille (HITT Contracting) -->
+                    <div class="testimonial-card" data-name="Brandon Aveille" data-title="Senior Preconstruction Manager" data-company="HITT Contracting, Inc." data-testimonial="I have known Mike, both personally and professionally, for over 10 years now and I can honestly say he is one of the most genuine and responsible people I've come across. He takes the time to understand and evaluate the goals of those around him, offering support and analysis where welcomed. Mike brings a confident humility to all situations, recognizing the value of collective wisdom and experience in creating positive outcomes and growth. He does not shy away from "tough" conversations, utilizing setbacks and failures as opportunities for improvement and optimization. Possibly more important than all of these is his dedication to keeping his word. Mike consistently delivers on commitments made, setting and managing expectations that work to benefit of all involved. All in all, Mike is a stand-up individual who's value is apparent from the time you meet him. He brings a marriage of solid work ethic, open mindedness, and integrity that are hard to find any one individual. He is someone you can trust to consistently work toward set goals and deliver on promises." data-headshot="images-main/test-brandon-aveille.jpg">
+                        <div class="testimonial-header">
+                            <img src="images-main/test-brandon-aveille.jpg" alt="Brandon Aveille">
+                            <div class="testimonial-author">
+                                <h4>Brandon Aveille</h4>
+                                <p class="author-title"><em>Senior Preconstruction Manager</em><br>HITT Contracting, Inc.</p>
+                            </div>
+                        </div>
+                        <div class="testimonial-content">
+                            <p>"I have known Mike, both personally and professionally, for over 10 years now and I can honestly say he is one of the most genuine and responsible people I've come across. He takes the time to understand and evaluate the goals of those around him, offering support and analysis where welcomed. Mike brings a confident humility to all situations, recognizing the value of collective wisdom and experience in creating positive outcomes and growth. He does not shy away from "tough" conversations, utilizing setbacks and failures as opportunities for improvement and optimization. Possibly more important than all of these is his dedication to keeping his word. Mike consistently delivers on commitments made, setting and managing expectations that work to benefit of all involved. All in all, Mike is a stand-up individual who's value is apparent from the time you meet him. He brings a marriage of solid work ethic, open mindedness, and integrity that are hard to find any one individual. He is someone you can trust to consistently work toward set goals and deliver on promises."</p>
+                        </div>
                     </div>
-                    <!-- Testimonial 5 -->
-                    <div class="testimonial-card">
-                        <img src="https://via.placeholder.com/80x80/3498DB/FFFFFF?text=DJ" alt="David Johnson">
-                        <h4>David Johnson</h4>
-                        <p>"Michael's technical background combined with sales acumen makes him uniquely qualified for complex deals."</p>
+                    <!-- Testimonial 5: Alexander Chitty (MGT) -->
+                    <div class="testimonial-card" data-name="Alexander Chitty" data-title="Senior Account Manager" data-company="MGT" data-testimonial="Mike is a professional in every sense of the word. Over the course of our time working together, I have been fortunate to watch him perfect his craft as an Account Manager. Whether it's interacting with internal stakeholders, introducing the company to someone who has never heard of it, or whatever the situation may be, Mike always carries himself with confidence and class. He is a natural leader with a sense of logic and ability to think critically that make him easy to bounce ideas off of. Mike is an advocate for his customers and is always focused on what is best for them. He builds personal relationships with the people he does business with so that there is never a doubt that he has your best interest in mind. I consider myself lucky to have worked with Mike for the past 5 years and hold him in the highest regard. I would recommend working with him to anybody should they be lucky enough also." data-headshot="images-main/test-alexander-chitty.jpg">
+                        <div class="testimonial-header">
+                            <img src="images-main/test-alexander-chitty.jpg" alt="Alexander Chitty">
+                            <div class="testimonial-author">
+                                <h4>Alexander Chitty</h4>
+                                <p class="author-title"><em>Senior Account Manager</em><br>MGT</p>
+                            </div>
+                        </div>
+                        <div class="testimonial-content">
+                            <p>"Mike is a professional in every sense of the word. Over the course of our time working together, I have been fortunate to watch him perfect his craft as an Account Manager. Whether it's interacting with internal stakeholders, introducing the company to someone who has never heard of it, or whatever the situation may be, Mike always carries himself with confidence and class. He is a natural leader with a sense of logic and ability to think critically that make him easy to bounce ideas off of. Mike is an advocate for his customers and is always focused on what is best for them. He builds personal relationships with the people he does business with so that there is never a doubt that he has your best interest in mind. I consider myself lucky to have worked with Mike for the past 5 years and hold him in the highest regard. I would recommend working with him to anybody should they be lucky enough also."</p>
+                        </div>
                     </div>
-                    <!-- Duplicate testimonials for seamless scrolling -->
-                    <div class="testimonial-card">
-                        <img src="https://via.placeholder.com/80x80/4A90E2/FFFFFF?text=JD" alt="John Doe">
-                        <h4>John Doe</h4>
-                        <p>"Michael's strategic approach to sales transformed our go-to-market strategy. His insights were invaluable."</p>
+                    <!-- Testimonial 6: Attalla Joudeh (Hibachio/Taqueria/DC Texas Architecture) -->
+                    <div class="testimonial-card" data-name="Attalla Joudeh" data-title="Architect, Restaurant Entrepreneur, Real Estate Investment" data-company="Hibachio / Taqueria 287 / DC Texas Architecture" data-testimonial="I've known Mike for 18 years and have seen firsthand the exceptional qualities that make him stand out. Mike's positive attitude is contagious, inspiring those around him to strive for their best. His reasoning, and analytical skills are remarkable, enabling him to tackle complex problems and situations with confidence and ease. Professionalism is ingrained in everything he does. What distinguishes Mike further is his curiosity and relentless pursuit of learning with a deep passion for technology. His expansive knowledge in this area, coupled with his enthusiasm, makes him a valuable partner and a potential game-changer. Outside of the office, Mike is an awesome friend. He has always been there with a listening ear and words of encouragement. He has generously supported me throughout my business journey with invaluable advice, input, time, and inspiration. Thank you, Mike." data-headshot="images-main/test-attalla-joudeh.jpg">
+                        <div class="testimonial-header">
+                            <img src="images-main/test-attalla-joudeh.jpg" alt="Attalla Joudeh">
+                            <div class="testimonial-author">
+                                <h4>Attalla Joudeh</h4>
+                                <p class="author-title"><em>Architect, Restaurant Entrepreneur, Real Estate Investment</em><br>Hibachio / Taqueria 287 / DC Texas Architecture</p>
+                            </div>
+                        </div>
+                        <div class="testimonial-content">
+                            <p>"I've known Mike for 18 years and have seen firsthand the exceptional qualities that make him stand out. Mike's positive attitude is contagious, inspiring those around him to strive for their best. His reasoning, and analytical skills are remarkable, enabling him to tackle complex problems and situations with confidence and ease. Professionalism is ingrained in everything he does. What distinguishes Mike further is his curiosity and relentless pursuit of learning with a deep passion for technology. His expansive knowledge in this area, coupled with his enthusiasm, makes him a valuable partner and a potential game-changer. Outside of the office, Mike is an awesome friend. He has always been there with a listening ear and words of encouragement. He has generously supported me throughout my business journey with invaluable advice, input, time, and inspiration. Thank you, Mike."</p>
+                        </div>
                     </div>
-                    <div class="testimonial-card">
-                        <img src="https://via.placeholder.com/80x80/50C878/FFFFFF?text=JS" alt="Jane Smith">
-                        <h4>Jane Smith</h4>
-                        <p>"Working with Michael on our cybersecurity implementation was seamless. He truly understands both tech and business."</p>
+                    <!-- Testimonial 7: Alan Jones (MGT) -->
+                    <div class="testimonial-card" data-name="Alan Jones" data-title="Chief Information Security Officer" data-company="MGT" data-testimonial="Mike Gee is an outstanding professional. I have worked with Mike in various roles over the years, but I find that he excels most in his current job as a sales professional. His tenacity, aggressiveness, and attention to detail serve him well in his position, and I am thankful he is on our team every day!" data-headshot="images-main/test-alan-jones.jpg">
+                        <div class="testimonial-header">
+                            <img src="images-main/test-alan-jones.jpg" alt="Alan Jones">
+                            <div class="testimonial-author">
+                                <h4>Alan Jones</h4>
+                                <p class="author-title"><em>Chief Information Security Officer</em><br>MGT</p>
+                            </div>
+                        </div>
+                        <div class="testimonial-content">
+                            <p>"Mike Gee is an outstanding professional. I have worked with Mike in various roles over the years, but I find that he excels most in his current job as a sales professional. His tenacity, aggressiveness, and attention to detail serve him well in his position, and I am thankful he is on our team every day!"</p>
+                        </div>
                     </div>
-                    <div class="testimonial-card">
-                        <img src="https://via.placeholder.com/80x80/FF6B6B/FFFFFF?text=MB" alt="Mike Brown">
-                        <h4>Mike Brown</h4>
-                        <p>"Michael's AI consulting helped us optimize our workflows and increase productivity by 40%."</p>
+                    
+                    <!-- Duplicate testimonials for seamless infinite scrolling -->
+                    <!-- Testimonial 1 (Duplicate) -->
+                    <div class="testimonial-card" data-name="Dennis Walczak" data-title="District Sales Manager" data-company="Palo Alto Networks" data-testimonial="Mike Gee is the consummate professional and ideal partner. I have had the pleasure of working alongside Mike for the past three years and have been impressed with his ability to align to our customers' desired business results, develop strategies to deliver those outcomes, and execute his plan to achieve the results on time and within budget. I rely on his attention to detail as he holds our team accountable to deliver the appropriate solution time and time again. He elevates my performance and those around him. For these reasons and because he has become a great friend, I recommend Mike Gee." data-headshot="images-main/test-dennis-walczak.jpg">
+                        <div class="testimonial-header">
+                            <img src="images-main/test-dennis-walczak.jpg" alt="Dennis Walczak">
+                            <div class="testimonial-author">
+                                <h4>Dennis Walczak</h4>
+                                <p class="author-title"><em>District Sales Manager</em><br>Palo Alto Networks</p>
+                            </div>
+                        </div>
+                        <div class="testimonial-content">
+                            <p>"Mike Gee is the consummate professional and ideal partner. I have had the pleasure of working alongside Mike for the past three years and have been impressed with his ability to align to our customers' desired business results, develop strategies to deliver those outcomes, and execute his plan to achieve the results on time and within budget. I rely on his attention to detail as he holds our team accountable to deliver the appropriate solution time and time again. He elevates my performance and those around him. For these reasons and because he has become a great friend, I recommend Mike Gee."</p>
+                        </div>
+                    </div>
+                    <!-- Testimonial 2 (Duplicate) -->
+                    <div class="testimonial-card" data-name="Tom Oliff" data-title="Inside Sales Manager" data-company="Net @ Work" data-testimonial="I've had the pleasure of working along side Mike in similar roles for 8+ years and have always been impressed with his professionalism and laser focus on exceeding customer expectations. He is consistently able to pull together cross-functional teams to successfully execute often complex / difficult projects with large customer organizations across multiple verticals. Mike truly sets a high bar for performance amongst his peers and any organization would be lucky to have him onboard helping to drive profitability and growth!" data-headshot="images-main/test-tom-oliff.jpg">
+                        <div class="testimonial-header">
+                            <img src="images-main/test-tom-oliff.jpg" alt="Tom Oliff">
+                            <div class="testimonial-author">
+                                <h4>Tom Oliff</h4>
+                                <p class="author-title"><em>Inside Sales Manager</em><br>Net @ Work</p>
+                            </div>
+                        </div>
+                        <div class="testimonial-content">
+                            <p>"I've had the pleasure of working along side Mike in similar roles for 8+ years and have always been impressed with his professionalism and laser focus on exceeding customer expectations. He is consistently able to pull together cross-functional teams to successfully execute often complex / difficult projects with large customer organizations across multiple verticals. Mike truly sets a high bar for performance amongst his peers and any organization would be lucky to have him onboard helping to drive profitability and growth!"</p>
+                        </div>
+                    </div>
+                    <!-- Testimonial 3 (Duplicate) -->
+                    <div class="testimonial-card" data-name="Andrew Kozlowitz" data-title="Vice President of Information Technology" data-company="MGT" data-testimonial="Mike is the reference standard of a customer advocate and champion. He continues to set the bar in our organization and in outside organizations on how to present customer solutions, and simply take care of customers. Mike and I have worked together for 8 years across various roles in sales and engineering, and he embraces change and additional responsibilities, while effectively communicating and managing complex situations." data-headshot="images-main/test-andrew-koz.jpg">
+                        <div class="testimonial-header">
+                            <img src="images-main/test-andrew-koz.jpg" alt="Andrew Kozlowitz">
+                            <div class="testimonial-author">
+                                <h4>Andrew Kozlowitz</h4>
+                                <p class="author-title"><em>Vice President of Information Technology</em><br>MGT</p>
+                            </div>
+                        </div>
+                        <div class="testimonial-content">
+                            <p>"Mike is the reference standard of a customer advocate and champion. He continues to set the bar in our organization and in outside organizations on how to present customer solutions, and simply take care of customers. Mike and I have worked together for 8 years across various roles in sales and engineering, and he embraces change and additional responsibilities, while effectively communicating and managing complex situations."</p>
+                        </div>
+                    </div>
+                    <!-- Testimonial 4 (Duplicate): Brandon Aveille (HITT Contracting) -->
+                    <div class="testimonial-card" data-name="Brandon Aveille" data-title="Senior Preconstruction Manager" data-company="HITT Contracting, Inc." data-testimonial="I have known Mike, both personally and professionally, for over 10 years now and I can honestly say he is one of the most genuine and responsible people I've come across. He takes the time to understand and evaluate the goals of those around him, offering support and analysis where welcomed. Mike brings a confident humility to all situations, recognizing the value of collective wisdom and experience in creating positive outcomes and growth. He does not shy away from "tough" conversations, utilizing setbacks and failures as opportunities for improvement and optimization. Possibly more important than all of these is his dedication to keeping his word. Mike consistently delivers on commitments made, setting and managing expectations that work to benefit of all involved. All in all, Mike is a stand-up individual who's value is apparent from the time you meet him. He brings a marriage of solid work ethic, open mindedness, and integrity that are hard to find any one individual. He is someone you can trust to consistently work toward set goals and deliver on promises." data-headshot="images-main/test-brandon-aveille.jpg">
+                        <div class="testimonial-header">
+                            <img src="images-main/test-brandon-aveille.jpg" alt="Brandon Aveille">
+                            <div class="testimonial-author">
+                                <h4>Brandon Aveille</h4>
+                                <p class="author-title"><em>Senior Preconstruction Manager</em><br>HITT Contracting, Inc.</p>
+                            </div>
+                        </div>
+                        <div class="testimonial-content">
+                            <p>"I have known Mike, both personally and professionally, for over 10 years now and I can honestly say he is one of the most genuine and responsible people I've come across. He takes the time to understand and evaluate the goals of those around him, offering support and analysis where welcomed. Mike brings a confident humility to all situations, recognizing the value of collective wisdom and experience in creating positive outcomes and growth. He does not shy away from "tough" conversations, utilizing setbacks and failures as opportunities for improvement and optimization. Possibly more important than all of these is his dedication to keeping his word. Mike consistently delivers on commitments made, setting and managing expectations that work to benefit of all involved. All in all, Mike is a stand-up individual who's value is apparent from the time you meet him. He brings a marriage of solid work ethic, open mindedness, and integrity that are hard to find any one individual. He is someone you can trust to consistently work toward set goals and deliver on promises."</p>
+                        </div>
+                    </div>
+                    <!-- Testimonial 5 (Duplicate): Alexander Chitty (MGT) -->
+                    <div class="testimonial-card" data-name="Alexander Chitty" data-title="Senior Account Manager" data-company="MGT" data-testimonial="Mike is a professional in every sense of the word. Over the course of our time working together, I have been fortunate to watch him perfect his craft as an Account Manager. Whether it's interacting with internal stakeholders, introducing the company to someone who has never heard of it, or whatever the situation may be, Mike always carries himself with confidence and class. He is a natural leader with a sense of logic and ability to think critically that make him easy to bounce ideas off of. Mike is an advocate for his customers and is always focused on what is best for them. He builds personal relationships with the people he does business with so that there is never a doubt that he has your best interest in mind. I consider myself lucky to have worked with Mike for the past 5 years and hold him in the highest regard. I would recommend working with him to anybody should they be lucky enough also." data-headshot="images-main/test-alexander-chitty.jpg">
+                        <div class="testimonial-header">
+                            <img src="images-main/test-alexander-chitty.jpg" alt="Alexander Chitty">
+                            <div class="testimonial-author">
+                                <h4>Alexander Chitty</h4>
+                                <p class="author-title"><em>Senior Account Manager</em><br>MGT</p>
+                            </div>
+                        </div>
+                        <div class="testimonial-content">
+                            <p>"Mike is a professional in every sense of the word. Over the course of our time working together, I have been fortunate to watch him perfect his craft as an Account Manager. Whether it's interacting with internal stakeholders, introducing the company to someone who has never heard of it, or whatever the situation may be, Mike always carries himself with confidence and class. He is a natural leader with a sense of logic and ability to think critically that make him easy to bounce ideas off of. Mike is an advocate for his customers and is always focused on what is best for them. He builds personal relationships with the people he does business with so that there is never a doubt that he has your best interest in mind. I consider myself lucky to have worked with Mike for the past 5 years and hold him in the highest regard. I would recommend working with him to anybody should they be lucky enough also."</p>
+                        </div>
+                    </div>
+                    <!-- Testimonial 6 (Duplicate): Attalla Joudeh (Hibachio/Taqueria/DC Texas Architecture) -->
+                    <div class="testimonial-card" data-name="Attalla Joudeh" data-title="Architect, Restaurant Entrepreneur, Real Estate Investment" data-company="Hibachio / Taqueria 287 / DC Texas Architecture" data-testimonial="I've known Mike for 18 years and have seen firsthand the exceptional qualities that make him stand out. Mike's positive attitude is contagious, inspiring those around him to strive for their best. His reasoning, and analytical skills are remarkable, enabling him to tackle complex problems and situations with confidence and ease. Professionalism is ingrained in everything he does. What distinguishes Mike further is his curiosity and relentless pursuit of learning with a deep passion for technology. His expansive knowledge in this area, coupled with his enthusiasm, makes him a valuable partner and a potential game-changer. Outside of the office, Mike is an awesome friend. He has always been there with a listening ear and words of encouragement. He has generously supported me throughout my business journey with invaluable advice, input, time, and inspiration. Thank you, Mike." data-headshot="images-main/test-attalla-joudeh.jpg">
+                        <div class="testimonial-header">
+                            <img src="images-main/test-attalla-joudeh.jpg" alt="Attalla Joudeh">
+                            <div class="testimonial-author">
+                                <h4>Attalla Joudeh</h4>
+                                <p class="author-title"><em>Architect, Restaurant Entrepreneur, Real Estate Investment</em><br>Hibachio / Taqueria 287 / DC Texas Architecture</p>
+                            </div>
+                        </div>
+                        <div class="testimonial-content">
+                            <p>"I've known Mike for 18 years and have seen firsthand the exceptional qualities that make him stand out. Mike's positive attitude is contagious, inspiring those around him to strive for their best. His reasoning, and analytical skills are remarkable, enabling him to tackle complex problems and situations with confidence and ease. Professionalism is ingrained in everything he does. What distinguishes Mike further is his curiosity and relentless pursuit of learning with a deep passion for technology. His expansive knowledge in this area, coupled with his enthusiasm, makes him a valuable partner and a potential game-changer. Outside of the office, Mike is an awesome friend. He has always been there with a listening ear and words of encouragement. He has generously supported me throughout my business journey with invaluable advice, input, time, and inspiration. Thank you, Mike."</p>
+                        </div>
+                    </div>
+                    <!-- Testimonial 7 (Duplicate): Alan Jones (MGT) -->
+                    <div class="testimonial-card" data-name="Alan Jones" data-title="Chief Information Security Officer" data-company="MGT" data-testimonial="Mike Gee is an outstanding professional. I have worked with Mike in various roles over the years, but I find that he excels most in his current job as a sales professional. His tenacity, aggressiveness, and attention to detail serve him well in his position, and I am thankful he is on our team every day!" data-headshot="images-main/test-alan-jones.jpg">
+                        <div class="testimonial-header">
+                            <img src="images-main/test-alan-jones.jpg" alt="Alan Jones">
+                            <div class="testimonial-author">
+                                <h4>Alan Jones</h4>
+                                <p class="author-title"><em>Chief Information Security Officer</em><br>MGT</p>
+                            </div>
+                        </div>
+                        <div class="testimonial-content">
+                            <p>"Mike Gee is an outstanding professional. I have worked with Mike in various roles over the years, but I find that he excels most in his current job as a sales professional. His tenacity, aggressiveness, and attention to detail serve him well in his position, and I am thankful he is on our team every day!"</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -299,6 +442,22 @@
             <img id="modal-project-image" src="" alt="Project Image">
             <h2 id="modal-project-title"></h2>
             <p id="modal-project-description"></p>
+        </div>
+    </div>
+
+    <!-- Resume Modal -->
+    <div id="resume-modal" class="modal">
+        <div class="modal-content resume-modal-content">
+            <div class="modal-header">
+                <h2>Michael Gee - Resume</h2>
+                <div class="modal-actions">
+                    <a href="Docs/Michael Gee Resume Senior Account Executive (250810).pdf" download class="download-btn">Download PDF</a>
+                    <button class="close-btn" id="close-resume-modal">&times;</button>
+                </div>
+            </div>
+            <div class="modal-body">
+                <iframe src="Docs/Michael Gee Resume Senior Account Executive (250810).pdf" width="100%" height="600px" frameborder="0"></iframe>
+            </div>
         </div>
     </div>
 </body>
