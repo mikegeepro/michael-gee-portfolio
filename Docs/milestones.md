@@ -65,7 +65,7 @@ Status: ✅ Complete
 
 Milestone 5: Testing & Deployment
 
-Status: ⏳ In Progress
+Status: ✅ Complete
 
     [x] Perform cross-browser testing (Chrome, Firefox, Safari).
 
@@ -73,6 +73,12 @@ Status: ⏳ In Progress
 
     [x] Conduct a final review of all content for typos and errors.
 
-    [ ] 👉 Optimize images and code for faster load times. <-- WE ARE HERE
+    [x] Optimize images and code for faster load times.
 
-    [ ] Choose a hosting provider and deploy the website.
+    [x] Choose a hosting provider and deploy the website.
+
+    [x] Set up domain and SSL certificate.
+
+    [x] Conduct final testing and quality assurance.
+
+    [x] Launch the website and monitor performance.
