@@ -29,7 +29,7 @@ Status: ✅ Complete
 
 Milestone 3: Styling & Design (CSS)
 
-Status: ⏳ In Progress
+Status: ✅ Complete
 
     [x] Apply global styles (colors, fonts, box-sizing) in CSS.
 
@@ -43,11 +43,11 @@ Status: ⏳ In Progress
 
     [x] Style the "Contact" section and form.
 
-    [ ] Implement responsive design using CSS media queries.
+    [x] Implement responsive design using CSS media queries.
 
         [x] Make navigation bar responsive.
 
-        [ ] 👉 Make main content sections (Hero, About, etc.) responsive. <-- WE ARE HERE
+        [x] Make main content sections (Hero, About, etc.) responsive.
 
 Milestone 4: Interactivity & Functionality (JavaScript)
 
@@ -67,12 +67,12 @@ Milestone 5: Testing & Deployment
 
 Status: ⏳ In Progress
 
-    [ ] 👉 Perform cross-browser testing (Chrome, Firefox, Safari). <-- WE ARE HERE
+    [x] Perform cross-browser testing (Chrome, Firefox, Safari).
 
-    [ ] Perform responsive testing on various physical devices or emulators.
+    [x] Perform responsive testing on various physical devices or emulators.
 
-    [ ] Conduct a final review of all content for typos and errors.
+    [x] Conduct a final review of all content for typos and errors.
 
-    [ ] Optimize images and code for faster load times.
+    [ ] 👉 Optimize images and code for faster load times. <-- WE ARE HERE
 
     [ ] Choose a hosting provider and deploy the website.
