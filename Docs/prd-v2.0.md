@@ -22,7 +22,7 @@ The website will be restructured to create a clearer narrative flow, separating 
 
     My Interests: A new, light-hearted section on personal interests (Travel, Food, Golf) to add personality.
 
-    Testimonials: A new section to build social proof using recommendations.
+    Endorsements: A new section to build social proof using recommendations.
 
     Contact: The existing, functional contact form.
 
