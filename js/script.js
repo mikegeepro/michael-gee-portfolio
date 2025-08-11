@@ -1,21 +1,12 @@
-// Smooth scrolling for navigation anchor links
+// Main initialization function - consolidates all event listeners
 document.addEventListener('DOMContentLoaded', function() {
-    // Select all anchor links that start with #
+    // Smooth scrolling for navigation anchor links
     const anchorLinks = document.querySelectorAll('a[href^="#"]');
-    
-    // Add click event listener to each anchor link
     anchorLinks.forEach(link => {
         link.addEventListener('click', function(event) {
-            // Prevent default jump behavior
             event.preventDefault();
-            
-            // Get the target section ID from the href attribute
             const targetId = this.getAttribute('href');
-            
-            // Find the element with that ID
             const targetElement = document.querySelector(targetId);
-            
-            // Smooth scroll to the target element
             if (targetElement) {
                 targetElement.scrollIntoView({
                     behavior: 'smooth'
@@ -28,27 +19,30 @@ document.addEventListener('DOMContentLoaded', function() {
     const hamburger = document.querySelector('.hamburger-menu');
     const navMenu = document.querySelector('.nav-menu');
     
-            hamburger.addEventListener('click', function() {
+    if (hamburger && navMenu) {
+        hamburger.addEventListener('click', function() {
             hamburger.classList.toggle('active');
             navMenu.classList.toggle('active');
         });
+    }
 
-        // Resume modal functionality
-        const resumeBtn = document.getElementById('resume-btn');
-        const resumeModal = document.getElementById('resume-modal');
-        const closeResumeModal = document.getElementById('close-resume-modal');
+    // Resume modal functionality
+    const resumeBtn = document.getElementById('resume-btn');
+    const resumeModal = document.getElementById('resume-modal');
+    const closeResumeModal = document.getElementById('close-resume-modal');
 
+    if (resumeBtn && resumeModal && closeResumeModal) {
         // Open resume modal
         resumeBtn.addEventListener('click', function(e) {
             e.preventDefault();
             resumeModal.style.display = 'block';
-            document.body.style.overflow = 'hidden'; // Prevent background scrolling
+            document.body.style.overflow = 'hidden';
         });
 
         // Close resume modal
         closeResumeModal.addEventListener('click', function() {
             resumeModal.style.display = 'none';
-            document.body.style.overflow = 'auto'; // Restore background scrolling
+            document.body.style.overflow = 'auto';
         });
 
         // Close modal when clicking outside of it
@@ -66,233 +60,237 @@ document.addEventListener('DOMContentLoaded', function() {
                 document.body.style.overflow = 'auto';
             }
         });
-    });
+    }
 
-// Initialize Vanilla Tilt on project cards
-document.addEventListener('DOMContentLoaded', function() {
-    VanillaTilt.init(document.querySelectorAll(".project-card"), {
-        max: 15,
-        speed: 400,
-        glare: true,
-        "max-glare": 0.5
-    });
-});
-
-// Project Modal Logic
-document.addEventListener('DOMContentLoaded', function() {
+    // Project Modal Logic
     const modal = document.getElementById('project-modal');
     const closeBtn = document.querySelector('.modal-close-btn');
     const caseStudyBtns = document.querySelectorAll('.btn-view-case-study');
     const interestImages = document.querySelectorAll('.interest-card img[data-image-src]');
     const testimonialCards = document.querySelectorAll('.testimonial-card');
 
-    const modalTitle = document.getElementById('modal-project-title');
-    const modalImage = document.getElementById('modal-project-image');
-    const modalDescription = document.getElementById('modal-project-description');
+    if (modal && closeBtn) {
+        const modalTitle = document.getElementById('modal-project-title');
+        const modalImage = document.getElementById('modal-project-image');
+        const modalDescription = document.getElementById('modal-project-description');
 
-    caseStudyBtns.forEach(btn => {
-        btn.addEventListener('click', function(event) {
-            event.preventDefault();
-            
-            // Get data from button
-            const title = this.dataset.title;
-            const imgSrc = this.dataset.imageSrc;
-            const description = this.dataset.description;
+        caseStudyBtns.forEach(btn => {
+            btn.addEventListener('click', function(event) {
+                event.preventDefault();
+                
+                // Get data from button
+                const title = this.dataset.title;
+                const imgSrc = this.dataset.imageSrc;
+                const description = this.dataset.description;
 
-            // Populate modal
-            modalTitle.textContent = title;
-            modalImage.src = imgSrc;
-            modalDescription.textContent = description;
+                // Populate modal
+                modalTitle.textContent = title;
+                modalImage.src = imgSrc;
+                modalDescription.textContent = description;
 
-            // Show modal
-            modal.style.display = 'block';
+                // Show modal
+                modal.style.display = 'block';
+            });
         });
-    });
 
-    // Interest Image Modal Logic
-    interestImages.forEach(img => {
-        img.addEventListener('click', function(event) {
-            event.preventDefault();
-            
-            // Get data from image
-            const title = this.dataset.title;
-            const imgSrc = this.dataset.imageSrc;
-            const description = this.dataset.description;
+        // Interest Image Modal Logic
+        interestImages.forEach(img => {
+            img.addEventListener('click', function(event) {
+                event.preventDefault();
+                
+                // Get data from image
+                const title = this.dataset.title;
+                const imgSrc = this.dataset.imageSrc;
+                const description = this.dataset.description;
 
-            // Populate modal
-            modalTitle.textContent = title;
-            modalImage.src = imgSrc;
-            modalDescription.textContent = description;
+                // Populate modal
+                modalTitle.textContent = title;
+                modalImage.src = imgSrc;
+                modalDescription.textContent = description;
 
-            // Show modal
-            modal.style.display = 'block';
+                // Show modal
+                modal.style.display = 'block';
+            });
         });
-    });
 
-    // Testimonial Card Modal Logic
-    testimonialCards.forEach(card => {
-        card.addEventListener('click', function(event) {
-            event.preventDefault();
-            
-            // Get data from testimonial card data attributes
-            const name = this.dataset.name;
-            const title = this.dataset.title;
-            const company = this.dataset.company;
-            const testimonialText = this.dataset.testimonial;
-            const headshotSrc = this.dataset.headshot;
-            
-            // Create full testimonial content for modal
-            const fullContent = `"${testimonialText}"\n\n- ${name}, ${title} at ${company}`;
+        // Testimonial Card Modal Logic
+        testimonialCards.forEach(card => {
+            card.addEventListener('click', function(event) {
+                event.preventDefault();
+                
+                // Get data from testimonial card data attributes
+                const name = this.dataset.name;
+                const title = this.dataset.title;
+                const company = this.dataset.company;
+                const testimonialText = this.dataset.testimonial;
+                const headshotSrc = this.dataset.headshot;
+                
+                // Create full testimonial content for modal
+                const fullContent = `"${testimonialText}"\n\n- ${name}, ${title} at ${company}`;
 
-            // Populate modal
-            modalTitle.textContent = name;
-            modalImage.src = headshotSrc;
-            modalDescription.textContent = fullContent;
+                // Populate modal
+                modalTitle.textContent = name;
+                modalImage.src = headshotSrc;
+                modalDescription.textContent = fullContent;
 
-            // Show modal
-            modal.style.display = 'block';
+                // Show modal
+                modal.style.display = 'block';
+            });
         });
-    });
 
-    // Function to close modal
-    function closeModal() {
-        modal.style.display = 'none';
+        // Function to close modal
+        function closeModal() {
+            modal.style.display = 'none';
+        }
+
+        // Close modal events
+        closeBtn.addEventListener('click', closeModal);
+        window.addEventListener('click', function(event) {
+            if (event.target == modal) {
+                closeModal();
+            }
+        });
     }
 
-    // Close modal events
-    closeBtn.addEventListener('click', closeModal);
-    window.addEventListener('click', function(event) {
-        if (event.target == modal) {
-            closeModal();
-        }
-    });
-});
-
-// Contact Form Validation and Submission
-document.addEventListener('DOMContentLoaded', function() {
-    const form = document.querySelector('#contact form');
-    if (form) {
+    // Contact Form Validation and Submission
+    const contactForm = document.getElementById('contact-form');
+    if (contactForm) {
         const nameInput = document.getElementById('name');
         const emailInput = document.getElementById('email');
         const subjectInput = document.getElementById('subject');
         const messageInput = document.getElementById('message');
-        
-        // Create a success message element
-        const successMessage = document.createElement('p');
-        successMessage.id = 'form-success-message';
-        successMessage.className = 'success-message';
-        form.appendChild(successMessage);
+        const submitBtn = contactForm.querySelector('button[type="submit"]');
+        const successMessage = document.getElementById('form-success-message');
 
-        form.addEventListener('submit', function(event) {
-            event.preventDefault();
-            let isValid = validateForm();
-            
-            if (isValid) {
-                // Show loading state
-                const submitBtn = form.querySelector('button[type="submit"]');
-                const originalText = submitBtn.textContent;
-                submitBtn.textContent = 'Sending...';
-                submitBtn.disabled = true;
+        if (nameInput && emailInput && subjectInput && messageInput && submitBtn) {
+            // Real-time validation
+            [nameInput, emailInput, subjectInput, messageInput].forEach(input => {
+                input.addEventListener('blur', function() {
+                    validateField(this, getErrorMessage(this));
+                });
+
+                input.addEventListener('input', function() {
+                    clearError(this, this.parentElement.querySelector('.error-message'));
+                });
+            });
+
+            // Form submission
+            contactForm.addEventListener('submit', function(event) {
+                event.preventDefault();
                 
-                // Prepare email data
-                const templateParams = {
-                    from_name: nameInput.value,
-                    from_email: emailInput.value,
-                    subject: subjectInput.value,
-                    message: messageInput.value,
-                    to_name: 'Michael Gee'
-                };
+                if (validateForm()) {
+                    // Show loading state
+                    const originalText = submitBtn.textContent;
+                    submitBtn.textContent = 'Sending...';
+                    submitBtn.disabled = true;
 
-                // Send email using EmailJS
-                emailjs.send('service_g23i0xu', 'template_rznp6na', templateParams)
-                    .then(function(response) {
-                        console.log('SUCCESS!', response.status, response.text);
-                        successMessage.textContent = 'Thank you for your message! I will get back to you shortly.';
-                        successMessage.style.display = 'block';
-                        successMessage.className = 'success-message';
-                        form.reset();
-                        
-                        // Hide success message after 5 seconds
-                        setTimeout(() => {
-                            successMessage.style.display = 'none';
-                        }, 5000);
-                    })
-                    .catch(function(error) {
-                        console.log('FAILED...', error);
-                        successMessage.textContent = 'Sorry, there was an error sending your message. Please try again or contact me directly.';
-                        successMessage.style.display = 'block';
-                        successMessage.className = 'error-message';
-                    })
-                    .finally(function() {
-                        // Reset button state
-                        submitBtn.textContent = originalText;
-                        submitBtn.disabled = false;
-                    });
-            } else {
-                successMessage.style.display = 'none';
-            }
-        });
+                    // Prepare template parameters
+                    const templateParams = {
+                        from_name: nameInput.value,
+                        from_email: emailInput.value,
+                        subject: subjectInput.value,
+                        message: messageInput.value,
+                        to_name: 'Michael Gee'
+                    };
 
-        function validateForm() {
-            let valid = true;
-            valid = validateField(nameInput, 'Name is required.') && valid;
-            valid = validateField(emailInput, 'A valid email is required.') && valid;
-            valid = validateField(subjectInput, 'Subject is required.') && valid;
-            valid = validateField(messageInput, 'Message is required.') && valid;
-            return valid;
-        }
+                    // Send email using EmailJS
+                    emailjs.send('service_g23i0xu', 'template_rznp6na', templateParams)
+                        .then(function(response) {
+                            successMessage.textContent = 'Thank you for your message! I will get back to you shortly.';
+                            successMessage.style.display = 'block';
+                            successMessage.className = 'success-message';
+                            contactForm.reset();
+                            
+                            // Hide success message after 5 seconds
+                            setTimeout(() => {
+                                successMessage.style.display = 'none';
+                            }, 5000);
+                        })
+                        .catch(function(error) {
+                            successMessage.textContent = 'Sorry, there was an error sending your message. Please try again or contact me directly.';
+                            successMessage.style.display = 'block';
+                            successMessage.className = 'error-message';
+                        })
+                        .finally(function() {
+                            // Reset button state
+                            submitBtn.textContent = originalText;
+                            submitBtn.disabled = false;
+                        });
+                } else {
+                    successMessage.style.display = 'none';
+                }
+            });
 
-        function validateField(input, message) {
-            const formGroup = input.parentElement;
-            let errorMessage = formGroup.querySelector('.error-message');
-            if (!errorMessage) {
-                errorMessage = document.createElement('p');
-                errorMessage.className = 'error-message';
-                formGroup.appendChild(errorMessage);
+            function validateForm() {
+                let valid = true;
+                valid = validateField(nameInput, 'Name is required.') && valid;
+                valid = validateField(emailInput, 'A valid email is required.') && valid;
+                valid = validateField(subjectInput, 'Subject is required.') && valid;
+                valid = validateField(messageInput, 'Message is required.') && valid;
+                return valid;
             }
 
-            if (input.value.trim() === '') {
-                showError(input, errorMessage, message);
-                return false;
-            } else if (input.type === 'email' && !isValidEmail(input.value)) {
-                showError(input, errorMessage, 'Please enter a valid email address.');
-                return false;
-            } else {
-                clearError(input, errorMessage);
-                return true;
+            function validateField(input, message) {
+                const formGroup = input.parentElement;
+                let errorMessage = formGroup.querySelector('.error-message');
+                if (!errorMessage) {
+                    errorMessage = document.createElement('p');
+                    errorMessage.className = 'error-message';
+                    formGroup.appendChild(errorMessage);
+                }
+
+                if (input.value.trim() === '') {
+                    showError(input, errorMessage, message);
+                    return false;
+                } else if (input.type === 'email' && !isValidEmail(input.value)) {
+                    showError(input, errorMessage, 'Please enter a valid email address.');
+                    return false;
+                } else {
+                    clearError(input, errorMessage);
+                    return true;
+                }
             }
-        }
 
-        function showError(input, errorMessageElement, message) {
-            input.classList.add('error');
-            errorMessageElement.textContent = message;
-            errorMessageElement.style.display = 'block';
-        }
-
-        function clearError(input, errorMessageElement) {
-            input.classList.remove('error');
-
-            if (errorMessageElement) {
-                errorMessageElement.style.display = 'none';
+            function showError(input, errorMessageElement, message) {
+                input.classList.add('error');
+                errorMessageElement.textContent = message;
+                errorMessageElement.style.display = 'block';
             }
-        }
 
-        function isValidEmail(email) {
-            const regex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-            return regex.test(String(email).toLowerCase());
+            function clearError(input, errorMessageElement) {
+                input.classList.remove('error');
+
+                if (errorMessageElement) {
+                    errorMessageElement.style.display = 'none';
+                }
+            }
+
+            function isValidEmail(email) {
+                const regex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+                return regex.test(String(email).toLowerCase());
+            }
+
+            function getErrorMessage(input) {
+                switch(input.id) {
+                    case 'name': return 'Name is required.';
+                    case 'email': return 'A valid email is required.';
+                    case 'subject': return 'Subject is required.';
+                    case 'message': return 'Message is required.';
+                    default: return 'This field is required.';
+                }
+            }
         }
     }
-});
 
-// Enhanced Section Interactions and Animations
-document.addEventListener('DOMContentLoaded', function() {
     // Initialize Vanilla Tilt on all card types
-    VanillaTilt.init(document.querySelectorAll(".project-card, .service-card, .passion-card, .interest-card"), {
-        max: 15,
-        speed: 400,
-        glare: true,
-        "max-glare": 0.5
-    });
+    if (typeof VanillaTilt !== 'undefined') {
+        VanillaTilt.init(document.querySelectorAll(".project-card, .service-card, .passion-card, .interest-card"), {
+            max: 15,
+            speed: 400,
+            glare: true,
+            "max-glare": 0.5
+        });
+    }
 
     // Smooth reveal animations for sections
     const observerOptions = {

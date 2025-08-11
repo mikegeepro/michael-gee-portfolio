@@ -392,7 +392,7 @@
             <h2>Let's Connect</h2>
             <p>Have a question or want to work together? I'd love to hear from you. Fill out the form below and I'll get back to you as soon as possible.</p>
             
-            <form action="#" method="POST">
+            <form id="contact-form" action="#" method="POST">
                 <div class="form-group">
                     <label for="name">Full Name</label>
                     <input type="text" id="name" name="name" placeholder="Your Full Name" required>
@@ -414,6 +414,7 @@
                 </div>
                 
                 <button type="submit" class="btn btn-primary">Send Message</button>
+                <div id="form-success-message" class="success-message" style="display: none;"></div>
             </form>
         </section>
     </main>
