@@ -9,7 +9,7 @@ Status: ⏸️ Pending
 
     [ ] Draft all new copy for the Hero, "My Why", "My Work", "What Drives Me", and "My Interests" sections based on the PRD.
 
-    [ ] Gather testimonials and format them for the new "Testimonials" section.
+    [ ] Gather endorsements and format them for the new "Endorsements" section.
 
     [ ] Restructure index.html: remove the old "About Me" and "Projects" sections and add the new section containers in the correct order.
 
@@ -25,7 +25,7 @@ Status: ⏸️ Pending
 
     [ ] Design and style the card-based layouts for the "What Drives Me" and "My Interests" sections.
 
-    [ ] Design and style the "Testimonials" section (e.g., blockquote cards or a slider).
+    [ ] Design and style the "Endorsements" section (e.g., blockquote cards or a slider).
 
     [ ] Perform a full responsive design pass, ensuring all new sections look great on mobile, tablet, and desktop.
 

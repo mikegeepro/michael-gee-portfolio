@@ -318,25 +318,25 @@ document.addEventListener('DOMContentLoaded', function() {
         sectionObserver.observe(section);
     });
 
-    // Enhanced testimonials scroll with pause on hover
-    const testimonialsTrack = document.querySelector('.testimonials-track');
-    if (testimonialsTrack) {
-        testimonialsTrack.addEventListener('mouseenter', function() {
+    // Enhanced endorsements scroll with pause on hover
+    const endorsementsTrack = document.querySelector('.endorsements-track');
+    if (endorsementsTrack) {
+        endorsementsTrack.addEventListener('mouseenter', function() {
             this.style.animationPlayState = 'paused';
         });
 
-        testimonialsTrack.addEventListener('mouseleave', function() {
+        endorsementsTrack.addEventListener('mouseleave', function() {
             this.style.animationPlayState = 'running';
         });
 
         // Touch support for mobile devices
         let isTouching = false;
-        testimonialsTrack.addEventListener('touchstart', function() {
+        endorsementsTrack.addEventListener('touchstart', function() {
             isTouching = true;
             this.style.animationPlayState = 'paused';
         });
 
-        testimonialsTrack.addEventListener('touchend', function() {
+        endorsementsTrack.addEventListener('touchend', function() {
             isTouching = false;
             setTimeout(() => {
                 if (!isTouching) {

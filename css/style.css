@@ -316,7 +316,7 @@ footer {
     margin-bottom: 3rem;
 }
 
-/* My Work Section Styles */
+/* Expertise & Experience Section Styles */
 #work {
     padding: 6rem 2rem;
 }
@@ -343,7 +343,7 @@ footer {
     display: flex;
     flex-direction: column;
     transition: transform 0.3s cubic-bezier(.4,2,.6,1), box-shadow 0.3s cubic-bezier(.4,2,.6,1), border-color 0.3s;
-    padding: 0 1.5rem 1.5rem 1.5rem;
+    padding: 1.5rem 1.5rem 1.5rem 1.5rem;
 }
 
 .project-card img {
@@ -576,7 +576,7 @@ footer {
     box-shadow: 0 8px 16px rgba(0,0,0,0.3);
 }
 
-/* Testimonials Section Styles */
+/* Endorsements Section Styles */
 #testimonials {
     padding: 6rem 2rem;
     background-color: var(--color-surface);
@@ -588,7 +588,7 @@ footer {
     margin-bottom: 3rem;
 }
 
-.testimonials-scroll-container {
+.endorsements-scroll-container {
     overflow: hidden;
     position: relative;
     max-width: 1200px;
@@ -596,10 +596,10 @@ footer {
     height: 320px;
 }
 
-.testimonials-track {
+.endorsements-track {
     display: flex;
     gap: 2rem;
-    animation: scroll-testimonials 85s linear infinite; /* Doubled duration for seamless infinite scroll */
+    animation: scroll-endorsements 85s linear infinite; /* Doubled duration for seamless infinite scroll */
     width: max-content;
 }
 
@@ -688,12 +688,12 @@ footer {
     -webkit-box-orient: vertical;
 }
 
-@keyframes scroll-testimonials {
+@keyframes scroll-endorsements {
     0% {
         transform: translateX(0);
     }
     100% {
-        transform: translateX(-100%);
+        transform: translateX(calc(-7 * (350px + 2rem) + 2rem));
     }
 }
 
@@ -851,16 +851,16 @@ textarea:focus {
         font-size: 2rem;
     }
 
-    /* Pause testimonials scroll on mobile for better UX */
-    .testimonials-track {
+    /* Pause endorsements scroll on mobile for better UX */
+    .endorsements-track {
         animation-play-state: paused;
     }
     
-    .testimonials-scroll-container {
+    .endorsements-scroll-container {
         height: 280px;
     }
     
-    /* Mobile responsive testimonial cards */
+    /* Mobile responsive endorsement cards */
     .testimonial-card {
         min-width: 325px; /* Increased by 25% from 260px */
         max-width: 350px; /* Increased by 25% from 280px */
