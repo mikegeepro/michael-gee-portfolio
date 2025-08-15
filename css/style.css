@@ -576,6 +576,139 @@ footer {
     box-shadow: 0 8px 16px rgba(0,0,0,0.3);
 }
 
+/* Wanted Poster Section Styles */
+#wanted-poster {
+    padding: 6rem 2rem;
+    background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+#wanted-poster::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: repeating-linear-gradient(
+        45deg,
+        transparent,
+        transparent 20px,
+        rgba(251, 191, 36, 0.1) 20px,
+        rgba(251, 191, 36, 0.1) 40px
+    );
+    animation: stripeMove 4s linear infinite;
+}
+
+#wanted-poster h2 {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 3rem;
+    color: #fef3c7;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
+    position: relative;
+    z-index: 1;
+}
+
+.wanted-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.wanted-poster-card {
+    background: rgba(0, 0, 0, 0.3);
+    border: 4px solid #fbbf24;
+    border-radius: 15px;
+    padding: 3rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+    box-shadow: 0 0 30px rgba(220, 38, 38, 0.5);
+    position: relative;
+    overflow: hidden;
+}
+
+.wanted-poster-card::before {
+    content: '';
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    right: -3px;
+    bottom: -3px;
+    background: linear-gradient(45deg, #fbbf24, #f59e0b, #d97706, #fbbf24);
+    border-radius: 18px;
+    z-index: -1;
+    animation: borderGlow 2s ease-in-out infinite alternate;
+}
+
+.wanted-image {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 3px solid #fbbf24;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.wanted-image:hover {
+    transform: scale(1.02);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.7);
+}
+
+.wanted-details h3 {
+    color: #fef3c7;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    font-weight: 700;
+}
+
+.wanted-details p {
+    color: #fef3c7;
+    font-size: 1.1rem;
+    font-weight: 600;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+.wanted-details strong {
+    color: #fbbf24;
+    font-weight: 700;
+}
+
+.wanted-notice {
+    background: linear-gradient(45deg, #fbbf24, #f59e0b);
+    color: #92400e;
+    text-align: center;
+    padding: 0.75rem;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin-top: 1rem;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes borderGlow {
+    0% { opacity: 0.7; }
+    100% { opacity: 1; }
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+
+
 /* Endorsements Section Styles */
 #testimonials {
     padding: 6rem 2rem;
@@ -845,6 +978,7 @@ textarea:focus {
     #services,
     #passions,
     #interests,
+    #wanted-poster,
     #testimonials,
     #contact {
         padding-top: 4rem;
@@ -878,6 +1012,7 @@ textarea:focus {
     #services h2,
     #passions h2,
     #interests h2,
+    #wanted-poster h2,
     #testimonials h2,
     #contact h2 {
         font-size: 2rem;
@@ -905,6 +1040,29 @@ textarea:focus {
     /* Center the hero buttons on mobile */
     .hero-buttons {
         justify-content: center;
+    }
+
+    /* Mobile adjustments for wanted poster section */
+    #wanted-poster h2 {
+        font-size: 2rem;
+    }
+    
+    .wanted-poster-card {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding: 2rem;
+    }
+    
+    .wanted-image {
+        height: 300px;
+    }
+    
+    .wanted-details h3 {
+        font-size: 1.5rem;
+    }
+    
+    .wanted-details p {
+        font-size: 1rem;
     }
 
     /* Center the skills list on mobile */
